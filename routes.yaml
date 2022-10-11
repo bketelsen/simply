@@ -1,0 +1,25 @@
+routes:
+  /:
+    controller: channel
+    filter: 'tag:-[hash-liam]'
+    limit: 12
+    template: godo-template-featured
+    # Optional for metada for seo
+    # data: page.home-featured
+collections:
+  # Default
+  /articles/:
+    permalink: /articles/{slug}/
+    filter: 'tag:-[hash-bytes,hash-liam]'
+    template: index
+  /bytes/:
+    permalink: /bytes/{slug}/
+    filter: 'tag:[hash-bytes]'
+    template: godo-template-grid
+  /liam/:
+    permalink: /liam/{slug}/
+    filter: 'tag:[hash-liam]'
+    template: godo-template-grid
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
