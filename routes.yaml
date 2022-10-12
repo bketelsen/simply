@@ -1,11 +1,7 @@
 routes:
   /:
-    controller: channel
-    filter: 'tag:-[hash-liam]'
-    limit: 12
-    template: godo-template-featured
-    # Optional for metada for seo
-    # data: page.home-featured
+    template: godo-home-personal
+    data: page.home-personal
 collections:
   # Default
   /articles/:
